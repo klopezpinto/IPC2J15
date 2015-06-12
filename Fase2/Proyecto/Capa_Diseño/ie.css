@@ -1,0 +1,28 @@
+* html #wrapper {
+    background: url(images/body_t.gif) 24px 0px no-repeat;
+    backgro\und: none;
+}
+
+* html #ie {
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/body_t.png');
+    height: 39px;
+    width: 434px;
+    position: absolute;
+    margin-left: 24px;
+}
+
+* html #body {
+    background: url(images/body_bg.gif);
+    backgro\und: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/body_bg.png', sizingMethod=scale);
+}
+
+.footerie {
+    display: block;
+    disp\lay: none;
+}
+
+.footer {
+    display: none;
+    disp\lay: block;
+}
