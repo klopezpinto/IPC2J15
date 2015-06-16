@@ -1,0 +1,6 @@
+C:\Users\Karen\Documents\Visual Studio 2013\Projects\Practica1\WebService\bin\WebService.dll.config
+C:\Users\Karen\Documents\Visual Studio 2013\Projects\Practica1\WebService\bin\WebService.dll
+C:\Users\Karen\Documents\Visual Studio 2013\Projects\Practica1\WebService\bin\WebService.pdb
+C:\Users\Karen\Documents\Visual Studio 2013\Projects\Practica1\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\Users\Karen\Documents\Visual Studio 2013\Projects\Practica1\WebService\obj\Debug\WebService.dll
+C:\Users\Karen\Documents\Visual Studio 2013\Projects\Practica1\WebService\obj\Debug\WebService.pdb
