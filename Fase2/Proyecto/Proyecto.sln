@@ -28,6 +28,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Capa_Diseño(2)", "http://l
 		SlnRelativePath = "Capa_Diseño\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{269313E4-6067-4182-A93E-FF6730724025}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{FF3FB5FC-662A-4587-9E2B-66BE74CA8212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF3FB5FC-662A-4587-9E2B-66BE74CA8212}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF3FB5FC-662A-4587-9E2B-66BE74CA8212}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{269313E4-6067-4182-A93E-FF6730724025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269313E4-6067-4182-A93E-FF6730724025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269313E4-6067-4182-A93E-FF6730724025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269313E4-6067-4182-A93E-FF6730724025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
