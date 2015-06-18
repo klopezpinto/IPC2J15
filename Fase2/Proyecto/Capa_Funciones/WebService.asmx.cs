@@ -8,14 +8,10 @@ using System.Web.Services;
 
 namespace Capa_Funciones
 {
-    /// <summary>
-    /// Summary description for WebService
-    /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://localhost/WebService", Name = "WebService")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    // [System.Web.Script.Services.ScriptService]
+
     public class WebService : System.Web.Services.WebService
     {
         [WebMethod]
@@ -46,7 +42,7 @@ namespace Capa_Funciones
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             int count = 0;
-            while(dr.Read())
+            while (dr.Read())
             {
                 count += 1;
             }
@@ -59,7 +55,34 @@ namespace Capa_Funciones
             {
                 return "ERROR";
             }
-           
+        }
+
+        [WebMethod]
+        public string EditarDatosCliente(String nombre, String apellido, String direccion, int telefono, int credito)
+        {
+            string DtsConection = "Server=HPKELP\\SQLEXPRESSK; Initial Catalog=QuetzalExpress;Trusted_Connection=YES;";
+            SqlConnection con = new SqlConnection(DtsConection);
+            con.Open();
+
+            SqlCommand CMD = new SqlCommand("UPDATE Cliente SET nombre = '" + nombre + "' , apellido = '" + apellido + "' , direccion = '" + direccion + "' , telefono = " + telefono + " , tarjeta_credito = " + credito + ";", con);
+            CMD.ExecuteNonQuery();
+            con.Close();
+
+            return "OK";
+        }
+
+        [WebMethod]
+        public string NuevoCliente (int dpi, String usuario, String pass, String nombre, String apellido, String nit, String direccion, int telefono, int credito, int sucursal)
+        {
+            string DtsConection = "Server=HPKELP\\SQLEXPRESSK; Initial Catalog=QuetzalExpress;Trusted_Connection=YES;";
+            SqlConnection con = new SqlConnection(DtsConection);
+            con.Open();
+
+            SqlCommand CMD = new SqlCommand("INSERT into Cliente values (" + dpi + ",'" + usuario + "', '" + pass + "', '" + nombre + "', '" + apellido + "'," + nit + ", '" + direccion + "'," + telefono + "," + credito + "," + sucursal + ")", con);
+            CMD.ExecuteNonQuery();
+            con.Close();
+
+            return "OK";
         }
     }
 }

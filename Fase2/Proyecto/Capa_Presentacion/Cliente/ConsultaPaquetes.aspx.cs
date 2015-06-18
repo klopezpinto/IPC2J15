@@ -5,10 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Cliente_Devolucion : System.Web.UI.Page
+public partial class Cliente_VerPedidos : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Label32.Text = Session["textboxValue"].ToString();
     }
 }

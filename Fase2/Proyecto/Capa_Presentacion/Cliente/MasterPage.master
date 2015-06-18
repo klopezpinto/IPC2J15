@@ -21,11 +21,15 @@
     </div>
     <div id="topnav">
       <ul>
-        <li class="active"><a href="Pedidos.aspx">Cotizar/Pedido</a></li>
-        <li><a href="Devolucion.aspx">Devolución</a></li>
-        <li><a href="VerPedidos.aspx">Ver pedidos</a></li>
-        <li></li>
+        <li class="active"><a href="Cotizacion.aspx">Cotizar/Pedido</a></li>
+        <li><a href="ConsultaPaquetes.aspx">Consulta de Paquetes</a></li>
+        <li><a href="EditarPerfil.aspx">Editar Perfil</a></li>
+        <li><a href="/Inicio/Index.aspx">Cerrar Sesión</a></li>
        </ul>
+        <p>
+            &nbsp;</p>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
     </div>
     <br class="clear" />
   </div>

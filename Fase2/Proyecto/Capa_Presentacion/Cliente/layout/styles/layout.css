@@ -53,9 +53,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Header------------------------------------- */
 
-#header{padding:20px 0px; 
-z-index:1000;
-}
+#header{padding:20px 0; z-index:1000;}
 #header #logo{display:block; float:left; width:300px; overflow:hidden;}
 #header #logo h1, #header #logo p{margin:0; padding:0; line-height:normal;}
 #header #logo h1{font-size:36px; text-transform:uppercase;}

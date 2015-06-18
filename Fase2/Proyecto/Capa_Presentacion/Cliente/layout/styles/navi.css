@@ -9,7 +9,9 @@ File: Navigation CSS
 */
 
 #topnav{display:block; float:right; margin:7px 0 0 0; padding:0; list-style:none; font-size:14px; font-weight:bold; font-family:Verdana, Arial, Helvetica, sans-serif;}
-#topnav ul, #topnav li{float:left; list-style:none; margin:0; padding:0;}
+#topnav ul, #topnav li{float:left; list-style:none; margin:0; padding:0;
+    width: 172px;
+}
 #topnav li a:link, #topnav li a:visited, #topnav li a:hover{display:block; margin:0; padding:15px 20px; color:#999999; background-color:#333333;}
 #topnav ul ul li a:link, #topnav ul ul li a:visited{border:none;}
 #topnav li.last a{margin-right:0;}

@@ -8,24 +8,19 @@ using System.Web.UI.WebControls;
 
 public partial class Inicio_Login : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-  
-    }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Ingresar_Click(object sender, EventArgs e)
     {
         WebService ws = new WebService();
-        String user = txtuser.Text;
+        
         String pass = txtpass.Text;
-
+        String user = txtuser.Text;
         String response = ws.LoginCliente(user, pass);
         
         if (response.Equals("OK"))
         {
-            Response.Redirect("/Cliente/Pedidos.aspx");
-            txtuser.Text = "";
-        }
-            
+            Session["textboxValue"] = txtuser.Text;
+            Response.Redirect("/Cliente/Cotizacion.aspx");            
+        }           
         else
         {
             string message = "Nombre de usuario o contraseña incorrecta. Vuelve a intentar ingresar los datos.";
@@ -38,5 +33,10 @@ public partial class Inicio_Login : System.Web.UI.Page
             sb.Append("</script>");
             ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
         }
+    }
+
+    protected void CuentaNueva_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CrearUsuario.aspx");
     }
 }

@@ -1,41 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Inicio/MasterPage.master" AutoEventWireup="true" CodeFile="LoginE.aspx.cs" Inherits="Inicio_Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table style="width: 70%; border: 1px solid #cccccc; background-color: #CCCCCC" align="center">
+    <table style="width: 64%; border: 1px solid #cccccc; background-color: #CCCCCC" align="center">
         <tr>
-            <td rowspan="4" style="width: 220px">
-                <asp:Image ID="Image1" runat="server" Height="205px" ImageUrl="~/Inicio/images/demo/empleado.jpg" Width="235px" />
+            <td rowspan="3" style="width: 118px">
+                <asp:Image ID="Image1" runat="server" Height="164px" ImageUrl="~/Inicio/images/demo/empleado.jpg" Width="217px" />
             </td>
-            <td style="width: 13px">&nbsp;</td>
-            <td style="width: 76px">&nbsp;</td>
-            <td style="width: 35px">&nbsp;</td>
-            <td style="width: 295px">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 13px; height: 68px;"></td>
-            <td style="width: 76px; font-size: x-large; font-weight: 700; text-align: center; height: 68px;">
-                Usuario:</td>
-            <td style="width: 35px; height: 68px;">
-                <asp:TextBox ID="txtuser" runat="server" Height="36px" Width="205px" Font-Size="Large"></asp:TextBox>
+            <td colspan="2">
+                <asp:Label ID="Label3" runat="server" style="font-size: large" Text="¿ERES PARTE DE NUESTRO EQUIPO?"></asp:Label>
+                <br />
+                <asp:Label ID="Label4" runat="server" style="font-size: x-small" Text="Si usted es parte de nuestro equipo, por favor ingrese."></asp:Label>
+                <br />
+                <asp:Label ID="Label29" runat="server" Font-Size="X-Small" ForeColor="#CC0000" style="font-size: x-small" Text="* Campos Requeridos"></asp:Label>
             </td>
-            <td style="width: 295px; height: 68px;"></td>
         </tr>
         <tr>
-            <td style="width: 13px">&nbsp;</td>
-            <td style="width: 76px; font-size: x-large; font-weight: 700; text-align: center;">
-                &nbsp;</td>
-            <td style="width: 35px">
-                <asp:Button ID="Button1" runat="server" Height="37px" Text="Ingresar" Width="123px" OnClick="Button1_Click" />
+            <td style="width: 112px; font-size: large; font-weight: 700; height: 30px;">
+                Usuario: <asp:Label ID="Label27" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
+                </td>
+            <td style="width: 35px; height: 30px; font-size: large;">
+                <asp:TextBox ID="txtuser" runat="server" Height="16px" Width="205px" Font-Size="Large"></asp:TextBox>
             </td>
-            <td style="width: 295px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 13px">&nbsp;</td>
-            <td style="width: 76px">&nbsp;</td>
-            <td align="center" style="width: 35px; text-align: center">
-                &nbsp;</td>
-            <td style="width: 295px">&nbsp;</td>
+            <td style="width: 112px; font-size: x-large; font-weight: 700; ">
+                </td>
+            <td style="width: 35px; font-size: x-large; font-weight: 700; ">
+                <asp:Button ID="Ingresar" runat="server" Height="37px" Text="INGRESAR" Width="123px" OnClick="Ingresar_Click" />
+            </td>
         </tr>
-    </table>
+        </table>
 </asp:Content>
 
