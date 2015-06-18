@@ -1,0 +1,56 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Inicio_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Quetzal Express</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+    <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col1">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="Index.aspx">Quetzal Express</a></h1>
+                    <p>Importación de Paquetes</p>
+                </div>
+                <div id="topnav">
+                    <ul>
+                        <li class="active"><a href="Index.aspx">Home</a></li>
+                        <li><a href="#">Pasos a Seguir</a></li>
+                        <li><a href="Cotizador.aspx">Cotizador</a></li>
+                        <li><a href="#">Iniciar Sesión</a>
+                            <ul>
+                                <li><a href="LoginC.aspx">Usuario</a></li>
+                                <li><a href="LoginE.aspx">Empleado</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contactanos</a></li>
+                    </ul>
+                </div>
+                <br class="clear" />
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col3">
+            <div id="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col5">
+            <div id="copyright">
+                <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">Karen Elisa López Pinto</a></p>
+                <br class="clear" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

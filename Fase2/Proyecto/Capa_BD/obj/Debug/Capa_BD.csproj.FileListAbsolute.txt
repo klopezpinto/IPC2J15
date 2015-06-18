@@ -1,5 +1,0 @@
-c:\Users\Karen\documents\visual studio 2013\Projects\Proyecto\Capa_BD\bin\Debug\Capa_BD.dll
-c:\Users\Karen\documents\visual studio 2013\Projects\Proyecto\Capa_BD\bin\Debug\Capa_BD.pdb
-c:\Users\Karen\documents\visual studio 2013\Projects\Proyecto\Capa_BD\obj\Debug\Capa_BD.csprojResolveAssemblyReference.cache
-c:\Users\Karen\documents\visual studio 2013\Projects\Proyecto\Capa_BD\obj\Debug\Capa_BD.dll
-c:\Users\Karen\documents\visual studio 2013\Projects\Proyecto\Capa_BD\obj\Debug\Capa_BD.pdb

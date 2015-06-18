@@ -1,0 +1,6 @@
+C:\Users\Karen\Documents\GitHub\IPC2J15\Fase2\Proyecto\Capa_Funciones\bin\Capa_Funciones.dll.config
+C:\Users\Karen\Documents\GitHub\IPC2J15\Fase2\Proyecto\Capa_Funciones\bin\Capa_Funciones.dll
+C:\Users\Karen\Documents\GitHub\IPC2J15\Fase2\Proyecto\Capa_Funciones\bin\Capa_Funciones.pdb
+C:\Users\Karen\Documents\GitHub\IPC2J15\Fase2\Proyecto\Capa_Funciones\obj\Debug\Capa_Funciones.csprojResolveAssemblyReference.cache
+C:\Users\Karen\Documents\GitHub\IPC2J15\Fase2\Proyecto\Capa_Funciones\obj\Debug\Capa_Funciones.dll
+C:\Users\Karen\Documents\GitHub\IPC2J15\Fase2\Proyecto\Capa_Funciones\obj\Debug\Capa_Funciones.pdb
