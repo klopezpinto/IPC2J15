@@ -11,13 +11,9 @@ using System.Web.UI.WebControls;
 
 public partial class Cliente_EditarPerfil : System.Web.UI.Page
 {
-
     protected void Page_Load(object sender, EventArgs e)
     {
         Nombre.Text = Session["textboxValue"].ToString();
-        
-
-        
     }
 
     protected void Guardar_Click(object sender, EventArgs e)
@@ -28,11 +24,12 @@ public partial class Cliente_EditarPerfil : System.Web.UI.Page
         string direccion = txtdireccion.Text;
         int telefono = Int32.Parse(txttelefono.Text);
         int credito = Int32.Parse(txtcredito.Text);
+        String user = Session["textboxValue"].ToString();
 
-        String response = ws.EditarDatosCliente(nombre, apellido, direccion, telefono, credito);
+        String response = ws.EditarDatosCliente(user, nombre, apellido, direccion, telefono, credito);
         if (response.Equals("OK"))
         {
-            Response.Redirect("Cotizacion.aspx");
+            Response.Redirect("EditarPerfil.aspx");
         }
         else
         {
@@ -47,23 +44,24 @@ public partial class Cliente_EditarPerfil : System.Web.UI.Page
             ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
         }
     }
-    protected void Button1_Click(object sender, EventArgs e)
+
+    protected void Label30_Init(object sender, EventArgs e)
     {
         string DtsConection = "Server=HPKELP\\SQLEXPRESSK; Initial Catalog=QuetzalExpress;Trusted_Connection=YES;";
         SqlConnection con = new SqlConnection(DtsConection);
         
-
         String user = Session["textboxValue"].ToString();
-        String cadSql = "SELECT * FROM Cliente WHERE usuario = '" + user + "';";
-        SqlCommand CMD = new SqlCommand(cadSql, con);
+        SqlCommand CMD = new SqlCommand("SELECT * FROM Cliente WHERE usuario = '" + user + "';", con);
         con.Open();
-
         SqlDataReader leer = CMD.ExecuteReader();
         if (leer.Read() == true)
         {
+            txtnombre.Text = leer["nombre"].ToString();
             txtapellido.Text = leer["apellido"].ToString();
+            txtdireccion.Text = leer["direccion"].ToString();
+            txttelefono.Text = leer["telefono"].ToString();
+            txtcredito.Text = leer["tarjeta_credito"].ToString();
         }
-        
-
+        con.Close();
     }
 }

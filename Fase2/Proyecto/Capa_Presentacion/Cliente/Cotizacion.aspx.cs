@@ -11,4 +11,8 @@ public partial class Cliente_Pedidos : System.Web.UI.Page
     {
         Label32.Text = Session["textboxValue"].ToString();
     }
+    protected void Cotizar_Click(object sender, EventArgs e)
+    {
+
+    }
 }

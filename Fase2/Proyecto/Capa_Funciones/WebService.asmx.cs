@@ -58,13 +58,13 @@ namespace Capa_Funciones
         }
 
         [WebMethod]
-        public string EditarDatosCliente(String nombre, String apellido, String direccion, int telefono, int credito)
+        public string EditarDatosCliente(String user, String nombre, String apellido, String direccion, int telefono, int credito)
         {
             string DtsConection = "Server=HPKELP\\SQLEXPRESSK; Initial Catalog=QuetzalExpress;Trusted_Connection=YES;";
             SqlConnection con = new SqlConnection(DtsConection);
             con.Open();
 
-            SqlCommand CMD = new SqlCommand("UPDATE Cliente SET nombre = '" + nombre + "' , apellido = '" + apellido + "' , direccion = '" + direccion + "' , telefono = " + telefono + " , tarjeta_credito = " + credito + ";", con);
+            SqlCommand CMD = new SqlCommand("UPDATE Cliente SET nombre = '" + nombre + "' , apellido = '" + apellido + "' , direccion = '" + direccion + "' , telefono = " + telefono + " , tarjeta_credito = " + credito + "WHERE usuario = '" + user + "';", con);
             CMD.ExecuteNonQuery();
             con.Close();
 

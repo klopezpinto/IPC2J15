@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Inicio_Login : System.Web.UI.Page
+public partial class Inicio_LoginE : System.Web.UI.Page
 {
     protected void Ingresar_Click(object sender, EventArgs e)
     {

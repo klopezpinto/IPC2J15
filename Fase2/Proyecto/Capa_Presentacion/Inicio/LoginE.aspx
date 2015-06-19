@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Inicio/MasterPage.master" AutoEventWireup="true" CodeFile="LoginE.aspx.cs" Inherits="Inicio_Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Inicio/MasterPage.master" AutoEventWireup="true" CodeFile="LoginE.aspx.cs" Inherits="Inicio_LoginE" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table style="width: 64%; border: 1px solid #cccccc; background-color: #CCCCCC" align="center">
