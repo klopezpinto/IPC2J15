@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table style="width: 64%; border: 1px solid #cccccc; background-color: #CCCCCC" align="center">
         <tr>
-            <td rowspan="3" style="width: 118px">
+            <td rowspan="4" style="width: 118px">
                 <asp:Image ID="Image1" runat="server" Height="164px" ImageUrl="~/Inicio/images/demo/empleado.jpg" Width="217px" />
             </td>
             <td colspan="2">
@@ -15,7 +15,7 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 112px; font-size: large; font-weight: 700; height: 30px;">
+            <td style="width: 143px; font-size: large; font-weight: 700; height: 30px;">
                 Usuario: <asp:Label ID="Label27" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
                 </td>
             <td style="width: 35px; height: 30px; font-size: large;">
@@ -23,7 +23,15 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 112px; font-size: x-large; font-weight: 700; ">
+            <td style="width: 143px; font-size: large; font-weight: 700; height: 30px;">
+                Contraseña: <asp:Label ID="Label30" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
+                </td>
+            <td style="width: 35px; height: 30px; font-size: large;">
+                <asp:TextBox ID="txtpass" runat="server" Height="16px" Width="205px" Font-Size="Large" TextMode="Password"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 143px; font-size: x-large; font-weight: 700; ">
                 </td>
             <td style="width: 35px; font-size: x-large; font-weight: 700; ">
                 <asp:Button ID="Ingresar" runat="server" Height="37px" Text="INGRESAR" Width="123px" OnClick="Ingresar_Click" />

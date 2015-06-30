@@ -1,36 +1,57 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Inicio/MasterPage.master" AutoEventWireup="true" CodeFile="Cotizador.aspx.cs" Inherits="Inicio_Cotizador" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <table align="center" style="width: 61%; border: 1px solid #cccccc">
+    <table align="center" style="width: 490px; border: 1px solid #cccccc">
+        <tr>
+            <td colspan="2" bgcolor="White" style="text-align: center">
+                <asp:Label ID="Label30" runat="server" style="font-size: large; font-weight: 700" Text="COTIZADOR"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="White">
+                <asp:Label ID="Label29" runat="server" Font-Size="X-Small" ForeColor="#CC0000" Style="font-size: x-small" Text="* Campos Requeridos"></asp:Label>
+            </td>
+        </tr>
         <tr>
             <td colspan="2" bgcolor="White">
                 <asp:Label ID="Label1" runat="server" Text="Precio en U.S. $:"></asp:Label>
+                &nbsp;<asp:Label ID="Label27" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
                 <br />
-                <asp:TextBox ID="TextBox1" runat="server" Height="21px" Width="190px"></asp:TextBox>
+                <asp:TextBox ID="txtprecio" runat="server" Height="21px" Width="190px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td colspan="2" bgcolor="White">
                 <asp:Label ID="Label2" runat="server" Text="Shipping en U.S. $:"></asp:Label>
+                &nbsp;<asp:Label ID="Label31" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
                 <br />
-                <asp:TextBox ID="TextBox2" runat="server" Height="21px" Width="190px"></asp:TextBox>
+                <asp:TextBox ID="txtshipping" runat="server" Height="21px" Width="190px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td colspan="2" bgcolor="White">
                 <asp:Label ID="Label3" runat="server" Text="Peso en Lbs.:"></asp:Label>
+                &nbsp;<asp:Label ID="Label32" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
                 <br />
-                <asp:TextBox ID="TextBox3" runat="server" Height="21px" Width="190px"></asp:TextBox>
+                <asp:TextBox ID="txtpeso" runat="server" Height="21px" Width="190px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td colspan="2" bgcolor="White">
                 <asp:Label ID="Label4" runat="server" Text="Tipo:"></asp:Label>
                 <br />
-                <asp:DropDownList ID="Tipo" runat="server" Height="18px">
-                    <asp:ListItem>Consola de Videojuegos - 15%</asp:ListItem>
-                    <asp:ListItem>Celulares - 0%</asp:ListItem>
+                <asp:DropDownList ID="Tipo" runat="server" Height="19px" DataSourceID="SqlDataSource1" DataTextField="categoria" DataValueField="porcentaje" Width="196px">
                 </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuetzalExpressConnectionString %>" SelectCommand="SELECT * FROM [Impuesto]"></asp:SqlDataSource>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="White">
+                <asp:Label ID="Label10" runat="server" Text="Sucursal:"></asp:Label>
+                <br />
+                <asp:DropDownList ID="Tipo0" runat="server" Height="19px" DataSourceID="SqlDataSource2" DataTextField="direccion" DataValueField="cod_sucursal" Width="196px">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QuetzalExpressConnectionString %>" SelectCommand="SELECT * FROM [Sucursal]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
@@ -41,7 +62,7 @@
                 <asp:Label ID="Label5" runat="server" Text="Valor de Merc. :"></asp:Label>
             </td>
             <td bgcolor="White">
-                <asp:Label ID="lblmerc" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblmerc" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -49,7 +70,7 @@
                 <asp:Label ID="Label6" runat="server" Text="Shipping en U.S. :"></asp:Label>
             </td>
             <td bgcolor="White">
-                <asp:Label ID="lblshipping" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblshipping" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -57,7 +78,7 @@
                 <asp:Label ID="Label7" runat="server" Text="Servicio Quetzal Express:"></asp:Label>
             </td>
             <td bgcolor="White">
-                <asp:Label ID="lblservicio" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblservicio" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -65,7 +86,7 @@
                 <asp:Label ID="Label8" runat="server" Text="Impuestos:"></asp:Label>
             </td>
             <td bgcolor="White">
-                <asp:Label ID="lblimpuestos" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblimpuestos" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -73,7 +94,7 @@
                 <asp:Label ID="Label9" runat="server" Text="Total :"></asp:Label>
             </td>
             <td bgcolor="White">
-                <asp:Label ID="lbltotal" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lbltotal" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -84,7 +105,7 @@
         </tr>
         <tr>
             <td class="right" bgcolor="White" colspan="2">
-                <asp:Button ID="Cotizar" runat="server" Text="Cotizar" Font-Size="Small" Height="37px" Width="95px" />
+                <asp:Button ID="Cotizar" runat="server" Text="Cotizar" Font-Size="Small" Height="37px" Width="95px" OnClick="Cotizar_Click" />
             </td>
         </tr>
     </table>

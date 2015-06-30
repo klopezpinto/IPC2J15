@@ -19,7 +19,7 @@ public partial class Inicio_LoginC : System.Web.UI.Page
         if (response.Equals("OK"))
         {
             Session["textboxValue"] = txtuser.Text;
-            Response.Redirect("/Cliente/Cotizacion.aspx");            
+            Response.Redirect("/Cliente/EditarPerfil.aspx");            
         }           
         else
         {

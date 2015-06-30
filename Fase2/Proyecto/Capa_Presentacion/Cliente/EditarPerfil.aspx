@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td colspan="2" style="height: 2px">
-                <asp:Label ID="Label31" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label31" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
         </tr>
         <tr>

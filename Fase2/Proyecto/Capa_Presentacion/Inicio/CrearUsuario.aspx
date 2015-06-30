@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Inicio/MasterPage.master" AutoEventWireup="true" CodeFile="CrearUsuario.aspx.cs" Inherits="Inicio_CrearUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table style="width: 42%; border: 1px solid #cccccc">
+    <table style="width: 42%; border: 1px solid #cccccc" align="center">
         <tr>
             <td colspan="2">
                 <asp:Label ID="Label30" runat="server" style="font-size: large; font-weight: 700" Text="CREAR UNA CUENTA"></asp:Label>
@@ -74,6 +74,16 @@
                 &nbsp;<asp:Label ID="Label21" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtcredito" runat="server" Height="21px" Width="190px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="Label31" runat="server" Text="Sucursal:"></asp:Label>
+                <asp:Label ID="Label32" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*"></asp:Label>
+                <br />
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="direccion" DataValueField="cod_sucursal" Height="16px" Width="201px">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuetzalExpressConnectionString %>" SelectCommand="SELECT * FROM [Sucursal]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>

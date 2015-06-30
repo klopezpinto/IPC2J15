@@ -23,7 +23,7 @@ public partial class Inicio_CrearUsuario : System.Web.UI.Page
                 String direccion = txtdireccion.Text;
                 int telefono = Int32.Parse(txttelefono.Text);
                 int credito = Int32.Parse(txtcredito.Text);
-                int sucursal = 502;
+                int sucursal = Int32.Parse(DropDownList1.Text);
 
                 String response = ws.NuevoCliente(dpi, usuario, pass, nombre, apellido, "NULL", direccion, telefono, credito, sucursal);
                 if (response.Equals("OK"))
@@ -70,7 +70,7 @@ public partial class Inicio_CrearUsuario : System.Web.UI.Page
                 String direccion = txtdireccion.Text;
                 int telefono = Int32.Parse(txttelefono.Text);
                 int credito = Int32.Parse(txtcredito.Text);
-                int sucursal = 502;
+                int sucursal = Int32.Parse(DropDownList1.Text);
 
                 String response = ws.NuevoCliente(dpi, usuario, pass, nombre, apellido, nit, direccion, telefono, credito, sucursal);
                 if (response.Equals("OK"))
